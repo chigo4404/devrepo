@@ -79,7 +79,7 @@
   </div>
 </section>
 
-<!-- PROJECTS (INTERACTIVE) -->
+<!-- PROJECTS (ELITE INTERACTIVE + DIAGRAM PREVIEW) -->
 <section id="projects" class="py-20 px-6">
   <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">
     Featured Work
@@ -87,108 +87,142 @@
 
   <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-    <!-- CARD -->
-    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+    <!-- CARD 1 -->
+    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer hover:-translate-y-1"
          data-aos="fade-up">
+
+      <!-- DIAGRAM PREVIEW -->
+      <img src="images/landing-zone-diagram.png"
+           class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
 
       <!-- CONTENT -->
       <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">Azure Landing Zone</h3>
+        <h3 class="text-xl font-semibold mb-2 flex justify-between">
+          Azure Landing Zone
+          <span class="text-blue-400 text-sm">↗</span>
+        </h3>
+
         <p class="text-gray-400 text-sm">
           Secure hub-spoke architecture with firewall, private endpoints, and CAF alignment.
+        </p>
+
+        <p class="mt-4 text-blue-400 text-sm font-medium">
+          View Case Study →
         </p>
       </div>
 
       <!-- HOVER OVERLAY -->
-      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-6">
+      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
 
-        <h3 class="text-lg font-semibold mb-2">Architecture Overview</h3>
+        <img src="images/landing-zone-diagram.png"
+             class="w-full h-32 object-contain mb-4 rounded-lg">
 
-        <p class="text-gray-400 text-sm mb-4">
-          Hub-spoke model with Azure Firewall, NSGs, and private endpoints enforcing Zero Trust principles.
+        <p class="text-gray-400 text-xs mb-4">
+          Hub-spoke architecture with Azure Firewall, NSGs, and private endpoints.
         </p>
 
         <div class="flex gap-3">
           <a href="landing-zone.html"
-             class="bg-blue-600 px-4 py-2 rounded-lg text-sm hover:scale-105 transition">
+             class="bg-blue-600 px-4 py-2 rounded-lg text-sm">
             Case Study
           </a>
 
           <a href="https://github.com/chigo4404/azure-landing-zone-terraform"
              target="_blank"
-             class="border border-gray-500 px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition">
+             class="border border-gray-500 px-4 py-2 rounded-lg text-sm">
             Code
           </a>
         </div>
-
       </div>
     </div>
 
     <!-- CARD 2 -->
-    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer hover:-translate-y-1"
          data-aos="fade-up" data-aos-delay="100">
 
+      <img src="images/terraform-diagram.png"
+           class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+
       <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">Terraform Modules</h3>
+        <h3 class="text-xl font-semibold mb-2 flex justify-between">
+          Terraform Modules
+          <span class="text-blue-400 text-sm">↗</span>
+        </h3>
+
         <p class="text-gray-400 text-sm">
           Reusable modules enabling scalable deployments.
         </p>
+
+        <p class="mt-4 text-blue-400 text-sm font-medium">
+          View Case Study →
+        </p>
       </div>
 
-      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-6">
+      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
 
-        <h3 class="text-lg font-semibold mb-2">Module Design</h3>
+        <img src="images/terraform-diagram.png"
+             class="w-full h-32 object-contain mb-4 rounded-lg">
 
-        <p class="text-gray-400 text-sm mb-4">
-          Modular Terraform architecture supporting dev/prod environments with reusable components.
+        <p class="text-gray-400 text-xs mb-4">
+          Modular Terraform structure supporting dev/prod environments.
         </p>
 
         <div class="flex gap-3">
           <a href="terraform-modules.html"
-             class="bg-blue-600 px-4 py-2 rounded-lg text-sm hover:scale-105 transition">
+             class="bg-blue-600 px-4 py-2 rounded-lg text-sm">
             Case Study
           </a>
 
           <a href="#"
-             class="border border-gray-500 px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition">
+             class="border border-gray-500 px-4 py-2 rounded-lg text-sm">
             Code
           </a>
         </div>
-
       </div>
     </div>
 
     <!-- CARD 3 -->
-    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+    <div class="group relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer hover:-translate-y-1"
          data-aos="fade-up" data-aos-delay="200">
 
+      <img src="images/zero-trust-diagram.png"
+           class="w-full h-40 object-cover group-hover:scale-105 transition duration-300">
+
       <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">Zero Trust Architecture</h3>
+        <h3 class="text-xl font-semibold mb-2 flex justify-between">
+          Zero Trust Architecture
+          <span class="text-blue-400 text-sm">↗</span>
+        </h3>
+
         <p class="text-gray-400 text-sm">
           Identity-first model with segmentation and least privilege access.
         </p>
+
+        <p class="mt-4 text-blue-400 text-sm font-medium">
+          View Case Study →
+        </p>
       </div>
 
-      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-6">
+      <div class="absolute inset-0 bg-gray-950/95 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition duration-300 p-4">
 
-        <h3 class="text-lg font-semibold mb-2">Security Model</h3>
+        <img src="images/zero-trust-diagram.png"
+             class="w-full h-32 object-contain mb-4 rounded-lg">
 
-        <p class="text-gray-400 text-sm mb-4">
-          End-to-end Zero Trust design across identity, network, and workloads.
+        <p class="text-gray-400 text-xs mb-4">
+          End-to-end Zero Trust across identity, network, and workloads.
         </p>
 
         <div class="flex gap-3">
           <a href="zero-trust.html"
-             class="bg-blue-600 px-4 py-2 rounded-lg text-sm hover:scale-105 transition">
+             class="bg-blue-600 px-4 py-2 rounded-lg text-sm">
             Case Study
           </a>
 
           <a href="#"
-             class="border border-gray-500 px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition">
+             class="border border-gray-500 px-4 py-2 rounded-lg text-sm">
             Code
           </a>
         </div>
-
       </div>
     </div>
 

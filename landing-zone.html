@@ -63,6 +63,42 @@
     </ul>
   </section>
 
+  <section class="mb-12">
+  <h2 class="text-2xl font-semibold mb-6">Before vs After Architecture</h2>
+
+  <div class="grid md:grid-cols-2 gap-8">
+
+    <!-- BEFORE -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3 text-red-400">Before</h3>
+      <img src="images/before-architecture.png"
+           class="rounded-xl border border-gray-800 mb-3">
+
+      <ul class="text-gray-400 text-sm space-y-1">
+        <li>• Flat network design</li>
+        <li>• Public exposure of services</li>
+        <li>• No centralized security control</li>
+        <li>• Manual deployments</li>
+      </ul>
+    </div>
+
+    <!-- AFTER -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3 text-green-400">After</h3>
+      <img src="images/landing-zone-diagram.png"
+           class="rounded-xl border border-gray-800 mb-3">
+
+      <ul class="text-gray-400 text-sm space-y-1">
+        <li>• Hub-spoke architecture</li>
+        <li>• Centralized firewall</li>
+        <li>• Private endpoints</li>
+        <li>• Fully automated via Terraform</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
   <!-- ARCHITECTURE DECISIONS -->
   <section class="mb-12">
     <h2 class="text-2xl font-semibold mb-4">Architecture Decisions</h2>

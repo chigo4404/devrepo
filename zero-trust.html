@@ -66,10 +66,10 @@
     <h2 class="text-2xl font-semibold mb-4">Threat Model</h2>
 
     <ul class="text-gray-400 space-y-2">
-      <li>• Lateral movement within flat network architectures</li>
-      <li>• Over-permissive access roles</li>
-      <li>• Public exposure of services</li>
-      <li>• Lack of visibility into user activity</li>
+      <li>• Risk of lateral movement within flat network architectures</li>
+      <li>• Unauthorized access due to over-permissive roles</li>
+      <li>• Exposure of services via public endpoints</li>
+      <li>• Lack of visibility into user and system activity</li>
     </ul>
   </section>
 
@@ -85,8 +85,8 @@
     <ul class="text-gray-400 space-y-2">
       <li>• Identity-first access using Azure AD and RBAC</li>
       <li>• Multi-Factor Authentication (MFA) enforcement</li>
-      <li>• Conditional access policies based on context</li>
-      <li>• Removal of implicit trust across the network</li>
+      <li>• Conditional access based on user, device, and location</li>
+      <li>• Elimination of implicit trust within the network</li>
     </ul>
   </section>
 
@@ -98,8 +98,9 @@
          class="rounded-xl border border-gray-800 mb-4">
 
     <p class="text-gray-400">
-      The architecture enforces verification at every layer, ensuring that users,
-      devices, and services must be explicitly validated before access is granted.
+      The architecture enforces strict access controls at every layer, ensuring that
+      users, devices, and services must be explicitly verified before accessing resources.
+      No internal traffic is trusted by default.
     </p>
   </section>
 

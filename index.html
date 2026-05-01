@@ -41,21 +41,38 @@
     I design secure, scalable Azure environments using Infrastructure as Code—helping organizations reduce risk, optimize cost, and operate confidently.
   </p>
 
-  <div class="flex gap-4 justify-center" data-aos="fade-up" data-aos-delay="300">
-  
+  <div class="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="300">
+
+  <!-- PRIMARY CTA -->
   <a href="#projects"
-     class="bg-blue-600 px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition">
-     View Projects
+     class="group relative bg-blue-600 px-6 py-3 rounded-2xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
+
+    <span class="relative z-10 flex items-center gap-2">
+      View Projects
+      <span class="transition group-hover:translate-x-1">→</span>
+    </span>
+
+    <span class="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-20 blur-xl transition"></span>
   </a>
 
+  <!-- SECONDARY CTA -->
   <a href="#contact"
-     class="border border-gray-500 px-6 py-3 rounded-2xl hover:bg-gray-800 transition">
-     Contact Me
+     class="group border border-gray-500 px-6 py-3 rounded-2xl transition duration-300 hover:bg-gray-800 hover:border-gray-300">
+
+    <span class="flex items-center gap-2">
+      Contact Me
+      <span class="opacity-0 group-hover:opacity-100 transition">→</span>
+    </span>
   </a>
 
+  <!-- DOWNLOAD CV -->
   <a href="cv.pdf" download
-     class="bg-gray-800 border border-gray-700 px-6 py-3 rounded-2xl hover:bg-gray-700 transition">
-     Download CV
+     class="group bg-gray-800 border border-gray-700 px-6 py-3 rounded-2xl transition duration-300 hover:bg-gray-700 hover:border-gray-500">
+
+    <span class="flex items-center gap-2">
+      Download CV
+      <span class="transition group-hover:translate-y-1">⬇</span>
+    </span>
   </a>
 
 </div>

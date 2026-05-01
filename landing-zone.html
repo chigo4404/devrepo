@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Azure Landing Zone Case Study</title>
+  <title>Azure Landing Zone | Case Study</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -12,16 +12,15 @@
 <div class="max-w-5xl mx-auto">
 
   <!-- TITLE -->
-  <h1 class="text-4xl font-bold mb-6">
-    Azure Landing Zone (Terraform)
+  <h1 class="text-4xl font-bold mb-4">
+    Azure Landing Zone Architecture
   </h1>
 
-  <!-- SUMMARY -->
-  <p class="text-gray-400 mb-8 text-lg">
-    Designed and implemented a secure, scalable Azure landing zone using Terraform, aligned with enterprise best practices and Zero Trust principles.
+  <p class="text-gray-400 text-lg mb-8">
+    Designed a secure, scalable Azure foundation aligned with Zero Trust principles and enterprise cloud adoption frameworks.
   </p>
 
-  <!-- BUTTONS -->
+  <!-- ACTIONS -->
   <div class="flex gap-4 mb-12">
     <a href="https://github.com/chigo4404/azure-landing-zone-terraform"
        target="_blank"
@@ -37,78 +36,119 @@
 
   <!-- IMPACT -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Impact</h2>
+    <h2 class="text-2xl font-semibold mb-4">Business Impact</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 text-gray-400">
+      <p>✔ Reduced infrastructure cost by 30–50% through optimization</p>
+      <p>✔ Achieved 100% Infrastructure as Code adoption</p>
+      <p>✔ Improved deployment speed by 2–5x</p>
+      <p>✔ Eliminated major security gaps using Zero Trust principles</p>
+    </div>
+  </section>
+
+  <!-- CONTEXT -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Context & Challenges</h2>
+
+    <p class="text-gray-400 mb-4">
+      The organization required a standardized cloud foundation to support multiple workloads, but existing environments were fragmented,
+      manually configured, and lacked centralized security controls.
+    </p>
 
     <ul class="text-gray-400 space-y-2">
-      <li>• Reduced cloud infrastructure costs by 30–50%</li>
-      <li>• Achieved 100% infrastructure automation using Terraform</li>
-      <li>• Eliminated critical security gaps through Zero Trust architecture</li>
-      <li>• Improved deployment speed by 2–5x</li>
+      <li>• Inconsistent environment configurations</li>
+      <li>• Limited network segmentation</li>
+      <li>• No centralized security enforcement</li>
+      <li>• High operational overhead due to manual deployments</li>
     </ul>
   </section>
 
-  <!-- PROBLEM -->
+  <!-- ARCHITECTURE DECISIONS -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Problem</h2>
+    <h2 class="text-2xl font-semibold mb-4">Architecture Decisions</h2>
 
-    <p class="text-gray-400">
-      Organizations required a secure, scalable cloud foundation to support mission-critical workloads,
-      but existing environments lacked standardization, automation, and proper security controls.
-    </p>
+    <ul class="text-gray-400 space-y-3">
+      <li>
+        <strong>Hub-and-Spoke Network:</strong>
+        Centralized control point for traffic inspection and segmentation.
+      </li>
+
+      <li>
+        <strong>Azure Firewall:</strong>
+        Selected for centralized ingress/egress filtering and logging.
+      </li>
+
+      <li>
+        <strong>Private Endpoints:</strong>
+        Eliminated public exposure of services.
+      </li>
+
+      <li>
+        <strong>Terraform Modules:</strong>
+        Enabled reusable, environment-agnostic deployments.
+      </li>
+    </ul>
   </section>
 
-  <!-- SOLUTION -->
+  <!-- TRADE-OFFS -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Solution</h2>
-
-    <p class="text-gray-400 mb-4">
-      Designed a modular Azure landing zone using Terraform, implementing a hub-and-spoke network architecture
-      with centralized security controls and reusable infrastructure components.
-    </p>
+    <h2 class="text-2xl font-semibold mb-4">Trade-offs & Considerations</h2>
 
     <ul class="text-gray-400 space-y-2">
-      <li>• Hub-spoke network architecture</li>
-      <li>• Azure Firewall for centralized traffic inspection</li>
-      <li>• Network Security Groups (NSGs) for segmentation</li>
-      <li>• Private endpoints for secure service access</li>
-      <li>• Terraform modules for reusable deployments</li>
+      <li>• Increased initial complexity vs long-term scalability</li>
+      <li>• Higher upfront cost (firewall) vs improved security posture</li>
+      <li>• Strict network controls vs developer flexibility</li>
     </ul>
   </section>
 
   <!-- ARCHITECTURE -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Architecture</h2>
+    <h2 class="text-2xl font-semibold mb-4">Architecture Overview</h2>
 
     <img src="images/landing-zone-diagram.png"
          class="rounded-xl border border-gray-800 shadow-lg mb-4">
 
     <p class="text-gray-400">
-      The architecture follows a hub-and-spoke model, where all traffic is routed through a centralized
-      firewall, ensuring security, control, and visibility across workloads.
+      The architecture enforces a Zero Trust model where all traffic flows through a centralized firewall.
+      Workloads are segmented across spoke networks, ensuring isolation and control.
     </p>
   </section>
 
-  <!-- TECH STACK -->
+  <!-- SECURITY MODEL -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Tech Stack</h2>
+    <h2 class="text-2xl font-semibold mb-4">Security Model</h2>
 
-    <div class="flex flex-wrap gap-3">
-      <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Azure</span>
-      <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Terraform</span>
-      <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Networking</span>
-      <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Security</span>
-      <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Zero Trust</span>
-    </div>
+    <ul class="text-gray-400 space-y-2">
+      <li>• Least privilege access across resources</li>
+      <li>• Network segmentation using NSGs</li>
+      <li>• Private connectivity via Private Endpoints</li>
+      <li>• Centralized inspection via Azure Firewall</li>
+    </ul>
+  </section>
+
+  <!-- IMPLEMENTATION -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Implementation Approach</h2>
+
+    <p class="text-gray-400 mb-4">
+      Infrastructure was deployed using modular Terraform design, separating concerns into network, security, and compute layers.
+    </p>
+
+    <ul class="text-gray-400 space-y-2">
+      <li>• Modular Terraform structure</li>
+      <li>• Environment separation (dev / prod)</li>
+      <li>• Reusable infrastructure components</li>
+    </ul>
   </section>
 
   <!-- LESSONS -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Key Takeaways</h2>
+    <h2 class="text-2xl font-semibold mb-4">Key Learnings</h2>
 
     <ul class="text-gray-400 space-y-2">
-      <li>• Importance of modular infrastructure design</li>
-      <li>• Security must be embedded at every layer</li>
-      <li>• Automation significantly improves consistency and speed</li>
+      <li>• Strong architecture upfront reduces long-term complexity</li>
+      <li>• Security must be embedded, not added later</li>
+      <li>• Automation is essential for consistency at scale</li>
     </ul>
   </section>
 

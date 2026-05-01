@@ -142,6 +142,54 @@
     </p>
   </section>
 
+  <section class="mb-12">
+  <h2 class="text-2xl font-semibold mb-6">Attack Simulation Scenario</h2>
+
+  <p class="text-gray-400 mb-6">
+    This section demonstrates how the Zero Trust architecture responds to a potential security breach scenario.
+  </p>
+
+  <!-- SCENARIO -->
+  <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 mb-6">
+    <h3 class="text-lg font-semibold text-red-400 mb-2">Scenario: Compromised User Credentials</h3>
+
+    <p class="text-gray-400 text-sm">
+      An attacker gains access to a valid user’s credentials and attempts to access internal cloud resources.
+    </p>
+  </div>
+
+  <!-- RESPONSE FLOW -->
+  <div class="space-y-4 text-gray-400">
+
+    <p><strong>1. Identity Verification:</strong>  
+    User authentication requires MFA, preventing access with credentials alone.</p>
+
+    <p><strong>2. Conditional Access Evaluation:</strong>  
+    Access attempt from an unusual location or device triggers policy restrictions.</p>
+
+    <p><strong>3. Least Privilege Enforcement:</strong>  
+    Even if access is granted, permissions are limited to only required resources.</p>
+
+    <p><strong>4. Network Segmentation:</strong>  
+    Lateral movement is restricted by NSGs and segmented network architecture.</p>
+
+    <p><strong>5. Continuous Monitoring:</strong>  
+    Suspicious behavior is logged and flagged for investigation.</p>
+
+    <p><strong>6. Automated Response:</strong>  
+    Alerts trigger security workflows, enabling rapid incident response.</p>
+
+  </div>
+
+  <!-- OUTCOME -->
+  <div class="mt-6 p-4 border border-green-500/30 bg-green-500/5 rounded-xl">
+    <p class="text-green-400 text-sm">
+      Outcome: The attacker is unable to gain meaningful access or move laterally within the environment,
+      significantly reducing the impact of the compromised credentials.
+    </p>
+  </div>
+</section>
+
   <!-- ARCHITECTURE DECISIONS -->
   <section class="mb-12">
     <h2 class="text-2xl font-semibold mb-4">Architecture Decisions</h2>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure Landing Zone Case Study</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-950 text-white font-sans px-6 py-12">
+
+<div class="max-w-5xl mx-auto">
+
+  <!-- TITLE -->
+  <h1 class="text-4xl font-bold mb-6">
+    Azure Landing Zone (Terraform)
+  </h1>
+
+  <!-- SUMMARY -->
+  <p class="text-gray-400 mb-8 text-lg">
+    Designed and implemented a secure, scalable Azure landing zone using Terraform, aligned with enterprise best practices and Zero Trust principles.
+  </p>
+
+  <!-- BUTTONS -->
+  <div class="flex gap-4 mb-12">
+    <a href="https://github.com/chigo4404/azure-landing-zone-terraform"
+       target="_blank"
+       class="bg-blue-600 px-6 py-3 rounded-xl">
+      View Code
+    </a>
+
+    <a href="index.html"
+       class="border border-gray-600 px-6 py-3 rounded-xl">
+      Back
+    </a>
+  </div>
+
+  <!-- IMPACT -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Impact</h2>
+
+    <ul class="text-gray-400 space-y-2">
+      <li>• Reduced cloud infrastructure costs by 30–50%</li>
+      <li>• Achieved 100% infrastructure automation using Terraform</li>
+      <li>• Eliminated critical security gaps through Zero Trust architecture</li>
+      <li>• Improved deployment speed by 2–5x</li>
+    </ul>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Problem</h2>
+
+    <p class="text-gray-400">
+      Organizations required a secure, scalable cloud foundation to support mission-critical workloads,
+      but existing environments lacked standardization, automation, and proper security controls.
+    </p>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Solution</h2>
+
+    <p class="text-gray-400 mb-4">
+      Designed a modular Azure landing zone using Terraform, implementing a hub-and-spoke network architecture
+      with centralized security controls and reusable infrastructure components.
+    </p>
+
+    <ul class="text-gray-400 space-y-2">
+      <li>• Hub-spoke network architecture</li>
+      <li>• Azure Firewall for centralized traffic inspection</li>
+      <li>• Network Security Groups (NSGs) for segmentation</li>
+      <li>• Private endpoints for secure service access</li>
+      <li>• Terraform modules for reusable deployments</li>
+    </ul>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Architecture</h2>
+
+    <img src="images/landing-zone-diagram.png"
+         class="rounded-xl border border-gray-800 shadow-lg mb-4">
+
+    <p class="text-gray-400">
+      The architecture follows a hub-and-spoke model, where all traffic is routed through a centralized
+      firewall, ensuring security, control, and visibility across workloads.
+    </p>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Tech Stack</h2>
+
+    <div class="flex flex-wrap gap-3">
+      <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Azure</span>
+      <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Terraform</span>
+      <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Networking</span>
+      <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Security</span>
+      <span class="bg-gray-800 px-3 py-1 rounded-full text-sm">Zero Trust</span>
+    </div>
+  </section>
+
+  <!-- LESSONS -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">Key Takeaways</h2>
+
+    <ul class="text-gray-400 space-y-2">
+      <li>• Importance of modular infrastructure design</li>
+      <li>• Security must be embedded at every layer</li>
+      <li>• Automation significantly improves consistency and speed</li>
+    </ul>
+  </section>
+
+</div>
+
+</body>
+</html>

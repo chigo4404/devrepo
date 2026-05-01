@@ -56,7 +56,7 @@
     </p>
   </section>
 
-  <!-- CONTEXT & CONSTRAINTS -->
+  <!-- CONTEXT -->
   <section class="mb-12">
     <h2 class="text-2xl font-semibold mb-4">Context & Constraints</h2>
 
@@ -73,13 +73,12 @@
     <h2 class="text-2xl font-semibold mb-4">Solution</h2>
 
     <p class="text-gray-400 mb-4">
-      Designed a modular Terraform architecture separating infrastructure concerns into reusable components,
-      enabling consistent deployments across environments.
+      Designed a modular Terraform architecture separating infrastructure concerns into reusable components.
     </p>
 
     <ul class="text-gray-400 space-y-2">
       <li>• Core modules (network, security, compute)</li>
-      <li>• Environment-specific configurations (dev, prod)</li>
+      <li>• Environment-specific configurations</li>
       <li>• Standardized variables and outputs</li>
       <li>• Centralized configuration patterns</li>
     </ul>
@@ -93,31 +92,98 @@
          class="rounded-xl border border-gray-800 mb-4">
 
     <p class="text-gray-400">
-      The architecture separates infrastructure into reusable modules, allowing consistent deployment patterns
-      while maintaining flexibility across environments.
+      Infrastructure is broken into reusable modules, enabling consistent and scalable deployments.
     </p>
   </section>
 
-  <!-- ARCHITECTURE DECISIONS -->
+  <!-- CODE SNIPPET -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-6">Implementation Example</h2>
+
+    <p class="text-gray-400 mb-4">
+      Example of using a reusable Terraform module for network provisioning.
+    </p>
+
+    <p class="text-xs text-gray-500 mb-2">Terraform (HCL)</p>
+
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 overflow-x-auto mb-6">
+<pre class="text-sm text-gray-300"><code>
+module "network" {
+  source              = "../modules/network"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+
+  vnet_name           = "vnet-hub"
+  address_space       = ["10.0.0.0/16"]
+}
+</code></pre>
+    </div>
+
+    <div class="text-gray-400 space-y-2">
+      <p><strong>Modular Design:</strong> Reusable across environments</p>
+      <p><strong>Parameterization:</strong> Flexible configuration</p>
+      <p><strong>Scalability:</strong> Enables rapid deployment</p>
+    </div>
+  </section>
+
+  <!-- SECURITY SNIPPET -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-6">Security Configuration Example</h2>
+
+    <p class="text-gray-400 mb-4">
+      Security policies embedded directly into infrastructure.
+    </p>
+
+    <p class="text-xs text-gray-500 mb-2">Terraform (HCL)</p>
+
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 overflow-x-auto mb-6">
+<pre class="text-sm text-gray-300"><code>
+resource "azurerm_network_security_group" "nsg" {
+  name                = "nsg-hub"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+
+  security_rule {
+    name                       = "Allow-HTTPS"
+    priority                   = 100
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    destination_port_range     = "443"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="text-gray-400 space-y-2">
+      <p><strong>Security as Code:</strong> Enforced via Terraform</p>
+      <p><strong>Consistency:</strong> Same rules everywhere</p>
+      <p><strong>Auditability:</strong> Fully traceable changes</p>
+    </div>
+  </section>
+
+  <!-- DECISIONS -->
   <section class="mb-12">
     <h2 class="text-2xl font-semibold mb-4">Architecture Decisions</h2>
 
-    <ul class="text-gray-400 space-y-3">
-      <li><strong>Modular Design:</strong> Enables reuse and reduces duplication</li>
-      <li><strong>Environment Separation:</strong> Prevents cross-environment impact</li>
-      <li><strong>Parameterization:</strong> Supports flexible deployments</li>
-      <li><strong>State Isolation:</strong> Improves reliability and reduces risk</li>
+    <ul class="text-gray-400 space-y-2">
+      <li>• Modular design for reuse</li>
+      <li>• Environment separation for isolation</li>
+      <li>• Parameter-driven deployments</li>
+      <li>• State isolation for reliability</li>
     </ul>
   </section>
 
   <!-- TRADE-OFFS -->
   <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-4">Trade-offs & Considerations</h2>
+    <h2 class="text-2xl font-semibold mb-4">Trade-offs</h2>
 
     <ul class="text-gray-400 space-y-2">
-      <li>• Increased upfront design complexity vs long-term efficiency</li>
-      <li>• Learning curve for teams adopting modular Terraform</li>
-      <li>• Additional effort required for module version management</li>
+      <li>• Higher initial complexity</li>
+      <li>• Learning curve for teams</li>
+      <li>• Need for module version management</li>
     </ul>
   </section>
 
@@ -126,20 +192,19 @@
     <h2 class="text-2xl font-semibold mb-4">Scalability & Reusability</h2>
 
     <p class="text-gray-400">
-      This modular design allows rapid onboarding of new environments and projects,
-      enabling infrastructure to scale without duplicating configuration logic.
+      Enables rapid onboarding of new environments without duplicating logic.
     </p>
   </section>
 
-  <!-- FUTURE IMPROVEMENTS -->
+  <!-- FUTURE -->
   <section class="mb-12">
     <h2 class="text-2xl font-semibold mb-4">Future Improvements</h2>
 
     <ul class="text-gray-400 space-y-2">
-      <li>• Introduce module versioning strategy</li>
-      <li>• Integrate CI/CD pipelines for automated deployments</li>
-      <li>• Add policy enforcement using Azure Policy</li>
-      <li>• Implement cost governance controls</li>
+      <li>• CI/CD integration</li>
+      <li>• Policy enforcement</li>
+      <li>• Cost governance</li>
+      <li>• Module versioning</li>
     </ul>
   </section>
 

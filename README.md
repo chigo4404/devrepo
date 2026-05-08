@@ -77,7 +77,7 @@ The primary objectives of this landing zone were:
 ---
 
 # Repository Structure
-
+```plaintext
 azure-enterprise-landing-zone/
 │
 ├── environments/
@@ -272,7 +272,7 @@ azure-enterprise-landing-zone/
 ├── SECURITY.md
 ├── LICENSE
 └── .gitignore
-
+```
 Security Principles
 
 This project aligns with several core Zero Trust and cloud security principles:

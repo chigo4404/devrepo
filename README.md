@@ -1,4 +1,3 @@
-# devrepo
 Development & Testing Enviroment
 # Azure Enterprise Landing Zone with Terraform
 
@@ -73,13 +72,12 @@ The primary objectives of this landing zone were:
 
 # Architecture Diagram
 
-![Architecture Diagram](diagrams/landing-zone-architecture.png)
+![Architecture Diagram](images/landing-zone-diagram.png)
 
 ---
 
 # Repository Structure
 
-```plaintext
 azure-enterprise-landing-zone/
 │
 ├── environments/
@@ -380,11 +378,10 @@ Security event orchestration
 Documentation
 
 Additional architecture and design documentation can be found in:
-
 /docs
+
 Author
 Chigozie Iluno
-
 Cloud & Security Architect
 
 Specializing in:

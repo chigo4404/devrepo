@@ -1,10 +1,10 @@
-##Personal portfolio
 
-##Author
-Chigozie Iluno
+# Author
+
+## Chigozie Iluno
 Cloud & Security Architect
 
-##Specializing in:
+Specializing in:
 
 - Azure Architecture
 - Cloud Security
@@ -12,8 +12,8 @@ Cloud & Security Architect
 - Zero Trust Design
 - Infrastructure Governance
 
-##Portfolio:
+## Portfolio
+
 https://chigoiluno.com
 
-##LinkedIn:
-https://linkedin.com/in/chigoi
+## LinkedIn

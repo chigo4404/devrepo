@@ -17,3 +17,5 @@ Specializing in:
 https://chigoiluno.com
 
 ## LinkedIn
+
+https://linkedin/in/chigoi

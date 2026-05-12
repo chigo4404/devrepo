@@ -485,51 +485,58 @@ resource "azurerm_network_security_group" "nsg" {
     </section>
 
     <!-- DEPLOYMENT VALIDATION -->
-<section class="mb-16">
+<section class="mb-20">
 
-  <h2 class="text-2xl font-semibold mb-6">
+  <h2 class="text-3xl font-bold mb-6">
     Deployment Validation
   </h2>
 
-  <p class="text-gray-600 dark:text-gray-400 mb-8">
+  <p class="text-gray-600 dark:text-gray-400 mb-10 max-w-4xl leading-relaxed">
     The infrastructure was successfully deployed and validated using modular Terraform workflows,
-    environment isolation, and automated deployment processes.
+    environment isolation, reusable infrastructure components, and automated deployment processes.
   </p>
 
-  <div class="grid md:grid-cols-2 gap-8">
+  <div class="grid md:grid-cols-2 gap-10">
 
     <!-- TERRAFORM APPLY -->
-    <div>
+    <div class="bg-slate-900/40 border border-slate-800 rounded-3xl p-5 shadow-2xl">
 
-      <img src="images/terraform-apply.png"
-           class="rounded-2xl border border-gray-300 dark:border-gray-800 shadow-lg mb-4">
+      <img
+        src="images/terraform-apply.png"
+        alt="Terraform Apply Execution"
+        class="w-full h-96 object-cover rounded-2xl border border-gray-700 shadow-lg mb-5 hover:scale-[1.02] transition duration-300"
+      >
 
-      <h3 class="font-semibold mb-2">
+      <h3 class="text-xl font-semibold mb-3">
         Terraform Apply Execution
       </h3>
 
-      <p class="text-sm text-gray-600 dark:text-gray-400">
-        Successful infrastructure provisioning using reusable Terraform modules.
+      <p class="text-gray-400 leading-relaxed">
+        Successful infrastructure provisioning and orchestration using reusable Terraform modules,
+        environment segregation, and infrastructure-as-code deployment pipelines.
       </p>
 
     </div>
 
     <!-- MODULE STRUCTURE -->
-    <div>
+    <div class="bg-slate-900/40 border border-slate-800 rounded-3xl p-5 shadow-2xl">
 
-      <img src="images/module-structure-vscode.png"
-           class="rounded-2xl border border-gray-300 dark:border-gray-800 shadow-lg mb-4">
+      <img
+        src="images/module-structure-vscode.png"
+        alt="Modular Repository Structure"
+        class="w-full h-96 object-cover rounded-2xl border border-gray-700 shadow-lg mb-5 hover:scale-[1.02] transition duration-300"
+      >
 
-      <h3 class="font-semibold mb-2">
+      <h3 class="text-xl font-semibold mb-3">
         Modular Repository Structure
       </h3>
 
-      <p class="text-sm text-gray-600 dark:text-gray-400">
-        Domain-based module organization supporting scalability and operational consistency.
+      <p class="text-gray-400 leading-relaxed">
+        Domain-based Terraform module architecture designed for scalability, operational consistency,
+        governance enforcement, and long-term maintainability.
       </p>
 
     </div>
-
 
   </div>
 

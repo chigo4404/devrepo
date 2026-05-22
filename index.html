@@ -1,64 +1,77 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+<header class="fixed top-0 left-0 w-full z-50">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TOP GLOW -->
+  <div class="absolute inset-0 pointer-events-none">
 
-  <title>Chigozie Iluno | Cloud Security Architect</title>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2
+                w-[700px] h-[120px]
+                bg-blue-500/20
+                blur-3xl rounded-full">
+    </div>
 
-  <!-- TAILWIND -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  </div>
 
-  <script>
-    tailwind.config = {
-      darkMode: 'class'
-    }
-  </script>
+  <!-- NAVBAR -->
+  <nav class="relative
+              backdrop-blur-xl
+              bg-[#071120]/90
+              border-b border-blue-500/60
+              shadow-[0_0_25px_rgba(37,99,235,0.25)]">
 
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <div class="max-w-7xl mx-auto px-6 py-5
+                flex justify-between items-center">
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
+      <!-- LOGO -->
+      <h1 class="text-3xl font-extrabold tracking-tight text-white">
 
-<body class="bg-white text-black dark:bg-gray-950 dark:text-white font-sans transition-colors duration-300">
+        Chigozie Iluno
 
-  <!-- NAV -->
-  <nav
-    class="fixed w-full bg-white/70 dark:bg-gray-900/70 backdrop-blur border-b border-gray-300 dark:border-gray-800 z-50 px-6 py-4 flex justify-between items-center">
+      </h1>
 
-    <h1 class="text-xl md:text-2xl font-bold tracking-wide">
-      Chigozie Iluno
-    </h1>
+      <!-- NAV LINKS -->
+      <div class="flex items-center gap-8">
 
-    <div class="flex gap-4 md:gap-6 text-sm md:text-lg items-center">
+        <a href="#projects"
+           class="text-white/90 hover:text-blue-400 transition font-medium">
 
-      <a href="#projects" class="hover:text-blue-400 transition">
-        Projects
-      </a>
+           Projects
 
-      <a href="#about" class="hover:text-blue-400 transition">
-        About
-      </a>
+        </a>
 
-      <a href="#contact" class="hover:text-blue-400 transition">
-        Contact
-      </a>
+        <a href="#about"
+           class="text-white/90 hover:text-blue-400 transition font-medium">
 
-      <!-- THEME TOGGLE -->
-      <button id="theme-toggle"
-        class="border border-gray-400 dark:border-gray-600 px-3 py-2 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-800 transition">
-        ☀️
-      </button>
+           About
+
+        </a>
+
+        <a href="#contact"
+           class="text-white/90 hover:text-blue-400 transition font-medium">
+
+           Contact
+
+        </a>
+
+        <!-- THEME TOGGLE -->
+        <button id="theme-toggle"
+                class="w-12 h-12 rounded-2xl
+                       border border-blue-500/40
+                       bg-[#101b2d]
+                       hover:border-blue-400
+                       hover:shadow-[0_0_20px_rgba(37,99,235,0.45)]
+                       transition-all duration-300">
+
+          ☀️
+
+        </button>
+
+      </div>
 
     </div>
+
   </nav>
+
+</header>
 
   <!-- HERO -->
   <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">

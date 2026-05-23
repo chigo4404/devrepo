@@ -2,13 +2,9 @@
 <html lang="en" class="dark">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Chigozie Iluno | Cloud & Security Architect</title>
-
-  <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -16,220 +12,138 @@
       darkMode: 'class'
     }
   </script>
-
-  <!-- AOS -->
-  <link rel="stylesheet"
-    href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-  <!-- FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
-  <!-- GLOBAL STYLES -->
-  <style>
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-    }
-
-  </style>
-
 </head>
 
-<body class="bg-white text-black dark:bg-gray-950 dark:text-white transition-colors duration-300">
+<body class="bg-gray-950 text-white">
 
   <!-- NAV -->
-<header class="fixed top-0 left-0 w-full z-50">
-
-  <!-- PREMIUM AZURE GLOW -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+  <header class="fixed top-0 left-0 w-full z-50">
 
     <!-- BLUE GLOW -->
-<div class="absolute top-0 left-1/2 transform -translate-x-1/2
-            w-[750px] h-[140px]
-            bg-blue-500 opacity-20 blur-3xl rounded-full pointer-events-none">
-</div>
-
-    <!-- SECONDARY LIGHT -->
-    <div class="absolute
-                top-[-20px]
-                left-1/2
-                -translate-x-1/2
-                w-[700px]
-                h-[120px]
-                rounded-full
-                bg-blue-500
-                blur-2xl">
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2
+                w-[750px] h-[140px]
+                bg-blue-500 opacity-20 blur-3xl rounded-full pointer-events-none">
     </div>
 
-  </div>
+    <!-- NAVBAR -->
+    <nav class="relative w-full
+                bg-[#071120]/90
+                backdrop-blur-xl
+                border-b border-blue-500/60
+                px-6 py-5
+                flex justify-between items-center">
 
-  <!-- NAVBAR -->
-  <nav class="relative w-full
-              bg-white/85 dark:bg-[#071120]/85
-              backdrop-blur-xl
-              border-b border-blue-500/30
-              shadow-lg shadow-blue-950/20
-              px-6 py-5
-              flex justify-between items-center
-              transition-all duration-300">
-
-    <!-- LOGO -->
-    <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight
-               text-black dark:text-white">
-
-      Chigozie Iluno
-
-    </h1>
-
-    <!-- NAV LINKS -->
-    <div class="flex items-center gap-5 md:gap-8">
-
-      <a href="#projects"
-         class="text-black/80 dark:text-white/90
-                hover:text-blue-500 dark:hover:text-blue-400
-                transition duration-300 text-sm md:text-lg font-medium">
-        Projects
-      </a>
-
-      <a href="#about"
-         class="text-black/80 dark:text-white/90
-                hover:text-blue-500 dark:hover:text-blue-400
-                transition duration-300 text-sm md:text-lg font-medium">
-        About
-      </a>
-
-      <a href="#contact"
-         class="text-black/80 dark:text-white/90
-                hover:text-blue-500 dark:hover:text-blue-400
-                transition duration-300 text-sm md:text-lg font-medium">
-        Contact
-      </a>
-
-      <!-- THEME TOGGLE -->
-      <button id="theme-toggle"
-        class="w-12 h-12 rounded-2xl
-               border border-blue-500/40
-               bg-white dark:bg-[#101b2d]
-               text-black dark:text-white
-               hover:border-blue-400
-               hover:bg-gray-100 dark:hover:bg-[#16243a]
-               transition-all duration-300">
-
-        ☀️
-
-      </button>
-
-    </div>
-
-  </nav>
-
-</header>
-
-  <!-- HERO -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-48 relative overflow-hidden">
-
-    <!-- HERO GLOW -->
-    <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2
-                w-[900px] h-[400px]
-                bg-blue-500 opacity-10 blur-3xl rounded-full pointer-events-none">
-    </div>
-
-    <div class="relative z-10">
-
-      <h1 class="text-5xl md:text-6xl font-bold mb-4"
-        data-aos="fade-up">
-
-        Cloud & Security Architect
-
+      <!-- LOGO -->
+      <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+        Chigozie Iluno
       </h1>
 
-      <p class="text-xl text-gray-600 dark:text-gray-400 mb-6"
-        data-aos="fade-up"
-        data-aos-delay="100">
+      <!-- LINKS -->
+      <div class="flex items-center gap-5 md:gap-8">
 
-        Azure • Terraform • Zero Trust
-
-      </p>
-
-      <p class="max-w-2xl text-gray-700 dark:text-gray-300 mb-8"
-        data-aos="fade-up"
-        data-aos-delay="200">
-
-        Designing secure, scalable, and governed cloud infrastructure with Infrastructure as Code.
-
-      </p>
-
-      <!-- HERO BUTTONS -->
-      <div class="flex flex-wrap gap-4 justify-center"
-        data-aos="fade-up"
-        data-aos-delay="300">
-
-        <!-- PRIMARY CTA -->
-        <a href="#projects"
-          class="group relative bg-blue-600 px-6 py-3 rounded-2xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
-
-          <span class="relative z-10 flex items-center gap-2 text-white">
-            View Projects
-            <span class="transition group-hover:translate-x-1">→</span>
-          </span>
-
-          <span
-            class="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-20 blur-xl transition">
-          </span>
-
+        <a href="#"
+           class="text-white/90 hover:text-blue-400 transition duration-300 text-sm md:text-lg font-medium">
+          Projects
         </a>
 
-        <!-- SECONDARY CTA -->
-        <a href="#contact"
-          class="group border border-gray-400 dark:border-gray-600 px-6 py-3 rounded-2xl transition duration-300 hover:bg-gray-200 dark:hover:bg-gray-800">
-
-          <span class="flex items-center gap-2">
-            Contact Me
-            <span class="opacity-0 group-hover:opacity-100 transition">→</span>
-          </span>
-
+        <a href="#"
+           class="text-white/90 hover:text-blue-400 transition duration-300 text-sm md:text-lg font-medium">
+          About
         </a>
 
-        <!-- VIEW CV -->
-        <a href="cv.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 px-6 py-3 rounded-2xl transition duration-300 hover:bg-gray-300 dark:hover:bg-gray-700">
-
-          <span class="flex items-center gap-2">
-            View CV
-            <span class="transition group-hover:translate-x-1">📄</span>
-          </span>
-
+        <a href="#"
+           class="text-white/90 hover:text-blue-400 transition duration-300 text-sm md:text-lg font-medium">
+          Contact
         </a>
+
+        <!-- TOGGLE -->
+        <button
+          class="w-12 h-12 rounded-2xl
+                 border border-blue-500/40
+                 bg-[#101b2d]
+                 text-white
+                 hover:border-blue-400
+                 hover:bg-[#16243a]
+                 transition-all duration-300">
+
+          ☀️
+
+        </button>
 
       </div>
 
-      <!-- PROOF STRIP -->
-      <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-600 dark:text-gray-400 mt-8"
-        data-aos="fade-up"
-        data-aos-delay="400">
+    </nav>
 
-        <span>✔ 7+ Years Experience</span>
-        <span>✔ Azure & Security Specialist</span>
-        <span>✔ Terraform Automation</span>
-        <span>✔ Zero Trust Architecture</span>
+  </header>
 
-      </div>
+  <!-- HERO -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-40">
+
+    <h1 class="text-5xl md:text-7xl font-bold mb-4">
+      Cloud & Security Architect
+    </h1>
+
+    <p class="text-xl text-gray-400 mb-6">
+      Azure • Terraform • Zero Trust
+    </p>
+
+    <p class="max-w-2xl text-gray-300 mb-8">
+      Designing secure, scalable, and governed cloud infrastructure with Infrastructure as Code.
+    </p>
+
+    <!-- HERO BUTTONS -->
+    <div class="flex flex-wrap gap-4 justify-center"
+      data-aos="fade-up"
+      data-aos-delay="300">
+
+      <!-- PRIMARY CTA -->
+      <a href="#projects"
+        class="group relative bg-blue-600 px-6 py-3 rounded-2xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
+
+        <span class="relative z-10 flex items-center gap-2 text-white">
+          View Projects
+          <span class="transition group-hover:translate-x-1">→</span>
+        </span>
+
+        <span
+          class="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-20 blur-xl transition"></span>
+      </a>
+
+      <!-- SECONDARY CTA -->
+      <a href="#contact"
+        class="group border border-gray-400 dark:border-gray-600 px-6 py-3 rounded-2xl transition duration-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+
+        <span class="flex items-center gap-2">
+          Contact Me
+          <span class="opacity-0 group-hover:opacity-100 transition">→</span>
+        </span>
+
+      </a>
+
+      <!-- VIEW CV -->
+<a href="cv.pdf"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="group bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 px-6 py-3 rounded-2xl transition duration-300 hover:bg-gray-300 dark:hover:bg-gray-700">
+
+  <span class="flex items-center gap-2">
+    View CV
+    <span class="transition group-hover:translate-x-1">📄</span>
+  </span>
+
+</a>
+
+    </div>
+
+    <!-- PROOF STRIP -->
+    <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-600 dark:text-gray-400 mt-8"
+      data-aos="fade-up"
+      data-aos-delay="400">
+
+      <span>✔ 7+ Years Experience</span>
+      <span>✔ Azure & Security Specialist</span>
+      <span>✔ Terraform Automation</span>
+      <span>✔ Zero Trust Architecture</span>
 
     </div>
 

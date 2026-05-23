@@ -2,12 +2,9 @@
 <html lang="en" class="dark">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Chigozie Iluno | Cloud Security Architect</title>
-
-  <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -15,41 +12,49 @@
       darkMode: 'class'
     }
   </script>
-
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 
-<body class="bg-white text-black dark:bg-gray-950 dark:text-white font-sans transition-colors duration-300">
+<body class="bg-gray-950 text-white">
 
   <!-- NAV -->
-  <nav
-    class="fixed w-full bg-white/70 dark:bg-gray-900/70 backdrop-blur border-b border-gray-300 dark:border-gray-800 z-50 px-6 py-4 flex justify-between items-center">
+  <header class="fixed top-0 left-0 w-full z-50">
 
-    <h1 class="text-xl md:text-2xl font-bold tracking-wide">
-      Chigozie Iluno
-    </h1>
+    <!-- BLUE GLOW -->
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2
+                w-[750px] h-[140px]
+                bg-blue-500 opacity-20 blur-3xl rounded-full pointer-events-none">
+    </div>
 
-    <div class="flex gap-4 md:gap-6 text-sm md:text-lg items-center">
+    <!-- NAVBAR -->
+    <nav class="relative w-full
+                bg-[#071120]/90
+                backdrop-blur-xl
+                border-b border-blue-500/60
+                px-6 py-5
+                flex justify-between items-center">
 
-      <a href="#projects" class="hover:text-blue-400 transition">
-        Projects
-      </a>
+      <!-- LOGO -->
+      <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight text-white">
+        Chigozie Iluno
+      </h1>
 
-      <a href="#about" class="hover:text-blue-400 transition">
-        About
-      </a>
+      <!-- LINKS -->
+      <div class="flex items-center gap-5 md:gap-8">
 
-      <a href="#contact" class="hover:text-blue-400 transition">
-        Contact
-      </a>
+        <a href="#"
+           class="text-white/90 hover:text-blue-400 transition duration-300 text-sm md:text-lg font-medium">
+          Projects
+        </a>
+
+        <a href="#"
+           class="text-white/90 hover:text-blue-400 transition duration-300 text-sm md:text-lg font-medium">
+          About
+        </a>
+
+        <a href="#"
+           class="text-white/90 hover:text-blue-400 transition duration-300 text-sm md:text-lg font-medium">
+          Contact
+        </a>
 
       <!-- THEME TOGGLE -->
       <button id="theme-toggle"

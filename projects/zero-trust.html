@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zero Trust Architecture | Case Study</title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+
+  <!-- THEME LOAD -->
+  <script>
+    if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!localStorage.getItem('theme'))
+    ) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+
+</head>
+
+<body class="bg-white text-black dark:bg-gray-950 dark:text-white font-sans transition-colors duration-300 px-6 py-12">
+
+  <!-- NAV -->
+  <nav class="max-w-6xl mx-auto flex justify-between items-center mb-12">
+
+    <a href="index.html"
+       class="text-xl font-bold tracking-wide hover:text-blue-400 transition">
+
+      Chigozie Iluno
+
+    </a>
+
+    <div class="flex gap-4 items-center">
+
+      <a href="index.html"
+         class="border border-gray-300 dark:border-gray-700 px-4 py-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+
+        ← Back
+
+      </a>
+
+      <!-- THEME TOGGLE -->
+      <button id="theme-toggle"
+              class="border border-gray-300 dark:border-gray-700 px-3 py-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+
+        ☀️
+
+      </button>
+
+    </div>
+
+  </nav>
+
+  <div class="max-w-5xl mx-auto">
+
+    <!-- TITLE -->
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      Zero Trust Architecture Implementation
+    </h1>
+
+    <p class="text-gray-600 dark:text-gray-400 text-lg mb-8 max-w-3xl">
+      Designed and implemented a Zero Trust security architecture focused on identity-first access,
+      continuous verification, segmentation, and attack surface reduction across cloud environments.
+    </p>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-2xl p-6 mb-12">
+
+      <h2 class="text-xl font-semibold mb-3">
+        Executive Summary
+      </h2>
+
+      <p class="text-gray-600 dark:text-gray-400">
+        Implemented a Zero Trust security model that eliminated implicit trust,
+        enforced least privilege access, improved visibility, and reduced lateral movement risks
+        through layered security controls and centralized monitoring.
+      </p>
+
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="flex flex-wrap gap-4 mb-12">
+
+      <a href="index.html"
+         class="border border-gray-300 dark:border-gray-700 px-6 py-3 rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+
+        Back to Portfolio
+
+      </a>
+
+    </div>
+
+    <!-- BUSINESS CONTEXT -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        Business Context
+      </h2>
+
+      <p class="text-gray-600 dark:text-gray-400">
+        As cloud adoption increased, traditional perimeter-based security models became insufficient.
+        The organization required a modern security architecture capable of protecting distributed workloads,
+        users, and services across cloud environments.
+      </p>
+
+    </section>
+
+    <!-- SECURITY IMPACT -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Security Impact
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <p class="text-green-500 font-semibold mb-2">
+            Reduced Attack Surface
+          </p>
+
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Eliminated unnecessary public exposure using private connectivity and segmentation.
+          </p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <p class="text-green-500 font-semibold mb-2">
+            Lateral Movement Prevention
+          </p>
+
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Restricted east-west traffic and workload communication paths.
+          </p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <p class="text-green-500 font-semibold mb-2">
+            Identity Enforcement
+          </p>
+
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Enforced least privilege access with MFA and conditional access policies.
+          </p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <p class="text-green-500 font-semibold mb-2">
+            Improved Visibility
+          </p>
+
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Centralized logging and monitoring improved detection capabilities.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- THREAT MODEL -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        Threat Model
+      </h2>
+
+      <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+
+        <li>• Lateral movement across flat network architectures</li>
+        <li>• Unauthorized access through compromised credentials</li>
+        <li>• Public exposure of sensitive services</li>
+        <li>• Limited visibility into user and workload behavior</li>
+
+      </ul>
+
+    </section>
+
+    <!-- ZERO TRUST APPROACH -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Zero Trust Approach
+      </h2>
+
+      <div class="space-y-6">
+
+        <div>
+          <h3 class="font-semibold mb-2">
+            Identity-First Security
+          </h3>
+
+          <p class="text-gray-600 dark:text-gray-400">
+            Every access request required authentication, authorization,
+            and contextual verification before access was granted.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-2">
+            Continuous Verification
+          </h3>
+
+          <p class="text-gray-600 dark:text-gray-400">
+            Access decisions were continuously evaluated using user identity,
+            device posture, session behavior, and contextual risk.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-2">
+            Assume Breach
+          </h3>
+
+          <p class="text-gray-600 dark:text-gray-400">
+            Network segmentation and least privilege controls were designed to minimize blast radius
+            in the event of compromise.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Zero Trust Architecture
+      </h2>
+
+      <img src="images/zero-trust-diagram.png"
+           class="rounded-2xl border border-gray-300 dark:border-gray-800 shadow-lg mb-6">
+
+      <p class="text-gray-600 dark:text-gray-400">
+        The architecture enforces verification at every layer,
+        ensuring users, devices, and workloads must be explicitly validated before access is permitted.
+      </p>
+
+    </section>
+
+    <!-- ACCESS FLOW -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Access Flow
+      </h2>
+
+      <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-2xl p-6">
+
+        <ol class="space-y-4 text-gray-600 dark:text-gray-400 list-decimal list-inside">
+
+          <li>User attempts to access application or service</li>
+          <li>Identity verified via Azure AD with MFA enforcement</li>
+          <li>Conditional access policies evaluated</li>
+          <li>RBAC policies determine least privilege access</li>
+          <li>Traffic routed through controlled network paths</li>
+          <li>Activity logged and continuously monitored</li>
+
+        </ol>
+
+      </div>
+
+    </section>
+
+    <!-- CONTROL LAYERS -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Zero Trust Control Layers
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <h3 class="font-semibold mb-2">
+            Identity
+          </h3>
+
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Azure AD, MFA, RBAC, Conditional Access
+          </p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <h3 class="font-semibold mb-2">
+            Device
+          </h3>
+
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Device posture and compliance validation
+          </p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <h3 class="font-semibold mb-2">
+            Network
+          </h3>
+
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Segmentation, NSGs, private endpoints
+          </p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-800 rounded-xl p-5">
+          <h3 class="font-semibold mb-2">
+            Monitoring
+          </h3>
+
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Logging, alerts, Defender for Cloud
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ATTACK SIMULATION -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Attack Simulation Scenarios
+      </h2>
+
+      <!-- SCENARIO 1 -->
+      <div class="bg-red-500/5 border border-red-500/20 rounded-2xl p-6 mb-8">
+
+        <h3 class="text-lg font-semibold text-red-400 mb-4">
+          Scenario 1 — Compromised User Credentials
+        </h3>
+
+        <div class="space-y-4 text-gray-600 dark:text-gray-400">
+
+          <p>• MFA prevents access using credentials alone</p>
+          <p>• Conditional access policies evaluate risk context</p>
+          <p>• RBAC limits access scope</p>
+          <p>• Monitoring detects suspicious activity</p>
+
+        </div>
+
+        <div class="mt-6 p-4 rounded-xl bg-green-500/5 border border-green-500/20">
+
+          <p class="text-green-500 text-sm">
+            Outcome: Attacker unable to gain meaningful access or move laterally.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- SCENARIO 2 -->
+      <div class="bg-red-500/5 border border-red-500/20 rounded-2xl p-6">
+
+        <h3 class="text-lg font-semibold text-red-400 mb-4">
+          Scenario 2 — Compromised Workload
+        </h3>
+
+        <div class="space-y-4 text-gray-600 dark:text-gray-400">
+
+          <p>• Segmentation restricts east-west traffic</p>
+          <p>• Private endpoints reduce exposure</p>
+          <p>• NSGs isolate workloads</p>
+          <p>• Monitoring detects abnormal communication patterns</p>
+
+        </div>
+
+        <div class="mt-6 p-4 rounded-xl bg-green-500/5 border border-green-500/20">
+
+          <p class="text-green-500 text-sm">
+            Outcome: Compromise contained within isolated workload boundary.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECURITY MATURITY -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        Security Maturity Alignment
+      </h2>
+
+      <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+
+        <li>• Aligns with Zero Trust principles (verify explicitly, least privilege, assume breach)</li>
+        <li>• Supports NIST Zero Trust Architecture guidance</li>
+        <li>• Enables continuous monitoring and adaptive access control</li>
+
+      </ul>
+
+    </section>
+
+    <!-- DECISIONS -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        Architecture Decisions
+      </h2>
+
+      <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+
+        <li>• Identity-first security model adoption</li>
+        <li>• Elimination of public endpoints where possible</li>
+        <li>• Centralized monitoring and inspection strategy</li>
+        <li>• Segmentation-first network design</li>
+
+      </ul>
+
+    </section>
+
+    <!-- TRADE-OFFS -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        Trade-offs & Considerations
+      </h2>
+
+      <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+
+        <li>• Increased operational complexity</li>
+        <li>• Additional authentication friction for users</li>
+        <li>• Greater policy management overhead</li>
+
+      </ul>
+
+    </section>
+
+    <!-- FUTURE -->
+    <section class="mb-16">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        Future Enhancements
+      </h2>
+
+      <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+
+        <li>• Advanced SIEM integration</li>
+        <li>• Risk-based adaptive access policies</li>
+        <li>• Expanded device compliance automation</li>
+        <li>• AI-assisted threat detection workflows</li>
+
+      </ul>
+
+    </section>
+
+    <!-- FINAL -->
+    <div class="text-center border-t border-gray-300 dark:border-gray-800 pt-8">
+
+      <p class="text-gray-500 text-sm">
+        This architecture assumes breach by default,
+        ensuring trust is continuously validated across identities, devices, and workloads.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- THEME SCRIPT -->
+  <script>
+
+    const toggleBtn = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    if (html.classList.contains('dark')) {
+      toggleBtn.innerHTML = '☀️';
+    } else {
+      toggleBtn.innerHTML = '🌙';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+
+      html.classList.toggle('dark');
+
+      if (html.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.innerHTML = '☀️';
+      } else {
+        localStorage.setItem('theme', 'light');
+        toggleBtn.innerHTML = '🌙';
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
